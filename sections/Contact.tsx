@@ -56,7 +56,7 @@ export default function Contact() {
                   <div className="text-xs font-jetbrains-mono text-label-caps text-on-surface-variant uppercase">
                     Headquarters
                   </div>
-                  <div className="font-jetbrains-mono text-sm text-white">SSTC Bhilai</div>
+                  <div className="font-jetbrains-mono text-sm text-white">C.G.</div>
                 </div>
               </div>
             </div>

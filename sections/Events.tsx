@@ -23,12 +23,6 @@ const eventsList = [
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuB9m0sxyPkDN3W3_E5Bi13-zj7FmdG6yWNeFtHYkVZar_7cr3mu7F_TkWSSio-IpjDR6eD9SEAVPK20zZMU6acXGTnM_mm7ubtoWPQMSxJvTGYtFyOo9Qfsb4erBheuCnRVsl6dizZLGs5N_eSyJhnOfJZ6AwO4JSE0L_gTKSOGcdlvrMwbs0PzFuowm_4a2mcMGrhyhYhD1lch8cObr3ZpIZNR_W8h-J_s3KOdUvyZJ2n3adWgm6M1O-4mmrQM6JWj4PHXD_H1HCM",
   },
-  {
-    title: "Meetups",
-    desc: "Networking and social mixers for the developer ecosystem.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAEBBU6w6imaeuU7yJ3MAe_V8pJNmM3C8IcdaiQj9oox_tI4L9MtCC69UtZ7_gC4_2n3BEmq7rzgJ0ppX3i_GEzpvh9H1RtemCDbLUMT3Fsv8P1Psh-tELB4IciaJcd_98r9S8GCXmYRZh4fBIvvNYAu089Ko-g_ao4F7O1ecKPn7tA4zdZFmu5M9KV8yw5S2mF53dK8RyTc6L6sJjVziF3JSkuT6yL2Ulvoflac4k8ZJezXlJzw0bKYtUWQn_4zmWkG9f0Ad5tOs8",
-  },
 ];
 
 export default function Events() {
@@ -47,7 +41,7 @@ export default function Events() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
           {eventsList.map((event, idx) => (
             <motion.div
               key={event.title}
@@ -83,12 +77,6 @@ export default function Events() {
               </div>
             </motion.div>
           ))}
-        </div>
-
-        <div className="mt-xl text-center">
-          <button className="text-primary-fixed-dim font-jetbrains-mono text-label-caps border-b border-primary-fixed-dim hover:pb-1 transition-all">
-            View Full Calendar
-          </button>
         </div>
       </div>
     </section>
