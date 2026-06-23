@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import MouseFollower from "@/components/MouseFollower";
+import IntroLoader from "@/components/IntroLoader";
+import ScrollProgress from "@/components/ScrollProgress";
+import AuroraBackground from "@/components/AuroraBackground";
+import CommandPalette from "@/components/CommandPalette";
+import KonamiEgg from "@/components/KonamiEgg";
+import ConsoleWelcome from "@/components/ConsoleWelcome";
+import PageTransitionWrapper from "@/components/PageTransitionWrapper";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,8 +29,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HackBios | Engineering the Future",
-  description: "The world's most elite decentralized network for advanced hardware and software engineering. Join a collective of visionaries building the impossible.",
+  title: "HackBios 2026 | Annual College Hackathon",
+  description: "The premier annual college hackathon and innovation event. Join developers, engineers, designers, and technology enthusiasts to collaborate, learn, and build impactful solutions.",
 };
 
 export default function RootLayout({
@@ -36,9 +43,17 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} dark`}
     >
-      <body className="font-sans antialiased selection:bg-primary-container selection:text-on-primary-fixed">
+      <body className="font-sans antialiased selection:bg-primary-container selection:text-on-primary-fixed bg-[#050505] text-[#dae6d0]">
+        <IntroLoader />
+        <ScrollProgress />
+        <AuroraBackground />
         <MouseFollower />
-        {children}
+        <CommandPalette />
+        <KonamiEgg />
+        <ConsoleWelcome />
+        <PageTransitionWrapper>
+          {children}
+        </PageTransitionWrapper>
       </body>
     </html>
   );

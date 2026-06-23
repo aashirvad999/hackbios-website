@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import packageInfo from "../package.json";
 import buildInfo from "./build-info.json";
+import Magnetic from "@/components/Magnetic";
 
 const socialLinks = [
   {
@@ -117,13 +118,21 @@ export default function Footer() {
     <footer className="w-full py-xl bg-surface-container-lowest border-t border-outline-variant">
       <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-lg text-left">
         <div className="space-y-md">
-          <div className="font-space-grotesk text-headline-sm font-bold text-primary-fixed-dim">
-            HackBios
+          <div className="font-space-grotesk text-headline-sm font-bold text-primary-fixed-dim flex items-center gap-1 cursor-default select-none">
+            <span>HackBios</span>
           </div>
-          <p className="text-on-surface-variant text-sm font-inter">
-            Engineering the Future. A global gathering for visionaries, coders, and architects of the digital age.
+
+          <div className="flex items-center gap-2 py-1 px-2.5 rounded-md bg-[#071105] border border-primary-container/20 w-fit select-none">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary-container animate-gps shrink-0" />
+            <span className="font-jetbrains-mono text-[9px] text-primary-fixed-dim font-bold tracking-wider uppercase">
+              SYSTEM STATUS • ONLINE
+            </span>
+          </div>
+
+          <p className="text-on-surface-variant text-sm font-inter pt-1">
+            Engineering the Future. A student-led annual hackathon bringing together builders, innovators, and creators to build the future.
           </p>
-          <p className="text-on-surface-variant text-xs font-jetbrains-mono uppercase">
+          <p className="text-on-surface-variant text-xs font-jetbrains-mono">
             © 2026 HackBios
           </p>
           <div className="mt-md pt-md border-t border-outline-variant/30 space-y-1">
@@ -163,14 +172,15 @@ export default function Footer() {
           <div className="flex justify-center md:justify-start mt-md">
             <div className="grid grid-cols-3 gap-3 justify-items-center sm:flex sm:flex-row sm:flex-wrap sm:justify-center md:justify-start">
               {socialLinks.map((social) => (
-                <Link
-                  key={social.name}
-                  href={social.url}
-                  aria-label={social.name}
-                  className="w-10 h-10 rounded-full border border-primary-fixed-dim/20 bg-primary-fixed-dim/5 text-primary-fixed-dim flex items-center justify-center transition-all duration-300 ease-out hover:scale-110 hover:border-primary-fixed-dim/50 hover:bg-primary-fixed-dim/10 hover:text-primary-fixed hover:shadow-[0_0_15px_rgba(57,255,20,0.25)]"
-                >
-                  {social.icon}
-                </Link>
+                <Magnetic key={social.name}>
+                  <Link
+                    href={social.url}
+                    aria-label={social.name}
+                    className="w-10 h-10 rounded-full border border-primary-fixed-dim/20 bg-primary-fixed-dim/5 text-primary-fixed-dim flex items-center justify-center transition-all duration-300 ease-out hover:scale-110 hover:border-primary-fixed-dim/50 hover:bg-primary-fixed-dim/10 hover:text-primary-fixed hover:shadow-[0_0_15px_rgba(57,255,20,0.25)] block"
+                  >
+                    {social.icon}
+                  </Link>
+                </Magnetic>
               ))}
             </div>
           </div>
@@ -178,7 +188,7 @@ export default function Footer() {
 
         <div className="space-y-sm">
           <h4 className="font-jetbrains-mono text-label-caps text-primary uppercase">
-            Stay Synced
+            Join the Community
           </h4>
           <form onSubmit={handleSubscribe} className="flex gap-2">
             <input
@@ -189,12 +199,14 @@ export default function Footer() {
               className="bg-[#050505] border border-outline-variant rounded p-2 text-xs w-full focus:border-primary-fixed-dim outline-none text-white font-inter"
               placeholder="Email"
             />
-            <button
-              type="submit"
-              className="bg-primary-fixed-dim text-on-primary px-4 py-2 rounded text-xs font-bold transition-all hover:scale-105 active:scale-95 cursor-pointer"
-            >
-              GO
-            </button>
+            <Magnetic>
+              <button
+                type="submit"
+                className="bg-primary-fixed-dim text-on-primary px-4 py-2 rounded text-xs font-bold transition-all hover:scale-105 active:scale-95 cursor-pointer block"
+              >
+                Join
+              </button>
+            </Magnetic>
           </form>
         </div>
       </div>

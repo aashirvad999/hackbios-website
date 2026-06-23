@@ -65,7 +65,7 @@ export default function SponsorRegistrationForm() {
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
-      alert("Partnership request transmitted to HackBios central node. Code: 200 OK");
+      alert("Sponsorship inquiry submitted successfully! Our organizing team will contact you shortly.");
       // Reset states
       setBrandName("");
       setOrgName("");
@@ -109,7 +109,7 @@ export default function SponsorRegistrationForm() {
               value={brandName}
               onChange={(e) => setBrandName(e.target.value)}
               className="w-full bg-[#050505] border border-outline-variant rounded-lg p-md text-on-surface font-inter transition-all outline-none"
-              placeholder="e.g. Cyberdyne Systems"
+              placeholder="e.g. TechCorp"
             />
           </div>
           <div className="space-y-sm">
@@ -184,7 +184,7 @@ export default function SponsorRegistrationForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full bg-[#050505] border border-outline-variant rounded-lg p-md text-on-surface font-inter transition-all outline-none"
-              placeholder="partners@company.com"
+              placeholder="sponsor@company.com"
             />
           </div>
           <div className="md:col-span-2 space-y-sm">
@@ -336,7 +336,7 @@ export default function SponsorRegistrationForm() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               className="w-full bg-[#050505] border border-outline-variant rounded-lg p-md text-on-surface font-inter transition-all outline-none resize-none"
-              placeholder="Tell us why you'd like to partner with HackBios..."
+              placeholder="Tell us why you'd like to sponsor HackBios..."
               rows={4}
             />
           </div>
@@ -385,16 +385,16 @@ export default function SponsorRegistrationForm() {
           {isSubmitting ? (
             <span className="flex items-center justify-center gap-2">
               <Loader2 size={18} className="animate-spin" />
-              PROCESSING
+              SUBMITTING
             </span>
           ) : submitted ? (
-            "PARTNERSHIP REQUEST TRANSMITTED"
+            "SPONSOR INQUIRY SUBMITTED"
           ) : (
-            "SUBMIT PARTNERSHIP REQUEST"
+            "SUBMIT SPONSORSHIP INQUIRY"
           )}
         </button>
         <p className="text-center text-on-surface-variant text-sm mt-md font-jetbrains-mono uppercase">
-          System response within 48 standard business hours.
+          Our team will review your inquiry and respond within 48 business hours.
         </p>
       </motion.div>
     </form>

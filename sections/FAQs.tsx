@@ -50,7 +50,7 @@ function FAQItem({ question, answer, isOpen, onClick }: FAQItemProps) {
 const faqs = [
   {
     question: "How do I register?",
-    answer: "Simply click the 'Register Now' button at the top of the page to access the registration form. Complete the multi-step protocol to secure your spot.",
+    answer: "Simply click the 'Register Now' button at the top of the page to access the registration form. Complete the steps to secure your participant ticket.",
   },
   {
     question: "How many members are allowed for the hackathon?",
@@ -74,13 +74,13 @@ export default function FAQs() {
       <div className="max-w-3xl mx-auto px-gutter relative z-10">
         <div className="text-center mb-2xl">
           <span className="font-jetbrains-mono text-xs tracking-[0.2em] text-primary-fixed-dim uppercase">
-            Protocol Docs
+            Frequently Asked Questions
           </span>
           <h2 className="font-space-grotesk text-headline-lg text-white mt-2">
             Common Queries
           </h2>
           <p className="text-on-surface-variant max-w-2xl mx-auto mt-xs font-inter">
-            Everything you need to know about the HackBios ecosystem.
+            Got questions about registration, team formation, or event logistics? We have answers.
           </p>
         </div>
 

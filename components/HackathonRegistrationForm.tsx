@@ -41,7 +41,7 @@ export default function HackathonRegistrationForm() {
       // Final Submit
       setIsSubmitting(true);
       setTimeout(() => {
-        alert("Registration Data Sent to Central Node. Access Granted.");
+        alert("Registration submitted successfully! We have sent a confirmation email.");
         setIsSubmitting(false);
         // Reset state
         setTeamName("");
@@ -112,7 +112,7 @@ export default function HackathonRegistrationForm() {
             >
               <div className="mb-10">
                 <label className="font-jetbrains-mono text-label-caps text-on-surface-variant mb-3 block">
-                  TEAM IDENTITY
+                  TEAM NAME
                 </label>
                 <input
                   type="text"
@@ -228,10 +228,10 @@ export default function HackathonRegistrationForm() {
               <div className="bg-primary-container/5 border border-primary-container/20 p-6 rounded-lg mb-6">
                 <h4 className="text-primary-container font-space-grotesk text-headline-sm mb-2 flex items-center gap-2">
                   <Info size={16} />
-                  Verification Protocol
+                  Verification Policy
                 </h4>
                 <p className="text-on-surface-variant text-sm leading-relaxed font-inter">
-                  Ensure your institution allows inter-disciplinary collaboration if your team consists of members from different departments. Academic credentials may be validated during the final phase.
+                  Ensure your institution allows inter-disciplinary collaboration if your team consists of members from different departments. Academic credentials will be validated during the check-in phase.
                 </p>
               </div>
             </motion.div>
@@ -252,7 +252,7 @@ export default function HackathonRegistrationForm() {
                 return (
                   <div key={memberNum} className="border-l-2 border-primary-container/30 pl-6 py-2">
                     <h3 className="font-jetbrains-mono text-label-caps text-primary-container mb-4">
-                      SOCIAL PROTOCOL - MEMBER 0{memberNum}
+                      SOCIAL LINKS - MEMBER 0{memberNum}
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <div className="relative flex items-center">
@@ -310,7 +310,7 @@ export default function HackathonRegistrationForm() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
                 <div>
                   <label className="font-jetbrains-mono text-label-caps text-on-surface-variant mb-2 block">
-                    EMAIL_ID
+                    EMAIL ADDRESS
                   </label>
                   <input
                     type="email"
@@ -323,7 +323,7 @@ export default function HackathonRegistrationForm() {
                 </div>
                 <div>
                   <label className="font-jetbrains-mono text-label-caps text-on-surface-variant mb-2 block">
-                    PHONE_NO
+                    PHONE NUMBER
                   </label>
                   <input
                     type="tel"
@@ -349,7 +349,7 @@ export default function HackathonRegistrationForm() {
                 </div>
                 <div>
                   <label className="font-jetbrains-mono text-label-caps text-on-surface-variant mb-2 block">
-                    TECH_STACK
+                    TECH STACK
                   </label>
                   <input
                     type="text"
@@ -364,7 +364,7 @@ export default function HackathonRegistrationForm() {
               <div className="space-y-6">
                 <div>
                   <label className="font-jetbrains-mono text-label-caps text-on-surface-variant mb-2 block">
-                    PREVIOUS_EXP
+                    PREVIOUS EXPERIENCE
                   </label>
                   <textarea
                     rows={3}
@@ -376,7 +376,7 @@ export default function HackathonRegistrationForm() {
                 </div>
                 <div>
                   <label className="font-jetbrains-mono text-label-caps text-on-surface-variant mb-2 block">
-                    TEAM_MANIFESTO
+                    WHAT ARE YOU PLANNING TO BUILD?
                   </label>
                   <textarea
                     rows={4}
@@ -384,7 +384,7 @@ export default function HackathonRegistrationForm() {
                     value={contactData.manifesto}
                     onChange={(e) => setContactData({ ...contactData, manifesto: e.target.value })}
                     className="w-full bg-surface-container-low border border-outline-variant/50 rounded-lg p-4 text-white focus:border-primary-container focus:ring-0 resize-none transition-all outline-none"
-                    placeholder="Briefly describe your team's objective and problem statement..."
+                    placeholder="Briefly describe what you'd like to build or learn at HackBios 2026..."
                   />
                 </div>
               </div>
@@ -401,7 +401,7 @@ export default function HackathonRegistrationForm() {
               currentStep === 1 ? "opacity-0 pointer-events-none" : "opacity-100"
             }`}
           >
-            PREV_STEP
+            PREVIOUS
           </button>
           <button
             type="button"
@@ -412,12 +412,12 @@ export default function HackathonRegistrationForm() {
             {isSubmitting ? (
               <>
                 <Loader2 size={16} className="animate-spin" />
-                PROCESSING...
+                SUBMITTING...
               </>
             ) : currentStep === 4 ? (
-              "INITIALIZE_SUBMIT"
+              "SUBMIT REGISTRATION"
             ) : (
-              "NEXT_STEP"
+              "NEXT"
             )}
           </button>
         </div>

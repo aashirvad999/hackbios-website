@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Register | HackBios 2026",
-  description: "Complete the registration protocol to secure your terminal in the HackBios 2026 arena.",
+  description: "Register to participate in HackBios 2026, our flagship college hackathon.",
 };
 
 export default function HackathonRegistrationPage() {
@@ -35,13 +35,13 @@ export default function HackathonRegistrationPage() {
           {/* Header Section */}
           <div className="mb-12 text-center animate-fade-up">
             <span className="font-jetbrains-mono text-xs tracking-wider text-primary-container uppercase">
-              SYSTEM ACCESS
+              Participant Registration
             </span>
             <h1 className="font-space-grotesk text-display-xl-mobile md:text-display-xl mt-4 leading-tight text-white font-bold">
-              Engineer the <span className="text-primary-container">Future.</span>
+              Build the <span className="text-primary-container">Future.</span>
             </h1>
             <p className="text-on-surface-variant mt-4 mx-auto max-w-2xl font-inter text-body-lg">
-              Complete the registration protocol to secure your terminal in the HackBios 2026 arena.
+              Complete the registration form below to secure your spot at HackBios 2026.
             </p>
           </div>
 

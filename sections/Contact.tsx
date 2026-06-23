@@ -12,7 +12,7 @@ export default function Contact() {
     setStatus("sending");
     setTimeout(() => {
       setStatus("sent");
-      alert("Message transmitted successfully. Access Log: OK");
+      alert("Message sent successfully. We will get back to you shortly!");
       setFormData({ name: "", email: "", message: "" });
       setStatus("idle");
     }, 1500);
@@ -23,13 +23,13 @@ export default function Contact() {
       <div className="max-w-container-max mx-auto px-gutter relative z-10">
         <div className="text-center mb-2xl">
           <span className="font-jetbrains-mono text-xs tracking-[0.2em] text-primary-fixed-dim uppercase">
-            Signal Input
+            Get In Touch
           </span>
           <h2 className="font-space-grotesk text-headline-lg text-white mt-2">
-            Initiate Contact
+            Contact Us
           </h2>
           <p className="text-body-lg text-on-surface-variant max-w-2xl mx-auto mt-xs font-inter">
-            Have a question, feedback, or a partnership inquiry? Our team typically responds within 24 standard cycles.
+            Have a question, feedback, or want to sponsor us? Reach out to the organizing team.
           </p>
         </div>
 
@@ -54,9 +54,9 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-xs font-jetbrains-mono text-label-caps text-on-surface-variant uppercase">
-                    Headquarters
+                    Event Location
                   </div>
-                  <div className="font-jetbrains-mono text-sm text-white">C.G.</div>
+                  <div className="font-jetbrains-mono text-sm text-white">College Campus</div>
                 </div>
               </div>
             </div>
@@ -108,15 +108,15 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status !== "idle"}
-                className="w-full bg-primary-container text-black font-bold py-md rounded-xl neon-glow hover:brightness-110 active:scale-95 transition-all btn-interact flex items-center justify-center gap-2"
+                className="w-full bg-primary-container text-black font-bold py-md rounded-xl neon-glow hover:brightness-110 active:scale-95 transition-all btn-interact flex items-center justify-center gap-2 cursor-pointer"
               >
                 {status === "sending" ? (
                   <>
                     <Loader2 size={16} className="animate-spin" />
-                    TRANSMITTING...
+                    SENDING...
                   </>
                 ) : (
-                  "Transmit Message"
+                  "Send Message"
                 )}
               </button>
             </form>

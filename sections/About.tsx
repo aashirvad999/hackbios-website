@@ -13,7 +13,7 @@ export default function About() {
             viewport={{ once: true }}
             className="font-jetbrains-mono text-xs tracking-[0.2em] text-primary-fixed-dim uppercase"
           >
-            Mission Protocol
+            Our Mission
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -31,33 +31,40 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-body-lg text-on-surface-variant max-w-2xl mx-auto mt-md font-inter"
           >
-            HackBios is a premier community for elite developers and visionary builders. We bridge the gap between curiosity and mastery by providing the resources, network, and challenges needed to engineer tomorrow.
+            HackBios is the premier annual college hackathon and innovation event designed to inspire creativity, learning, and collaboration. We provide an energetic space for students of all technical domains to solve real-world problems, learn new skills, network with industry mentors, and showcase their talents.
           </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2xl items-center">
           <div className="space-y-xl">
-            <div className="grid grid-cols-3 gap-sm md:gap-lg @container">
+            <div className="grid grid-cols-2 gap-sm md:gap-md @container">
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="p-sm md:p-md bg-surface-container-high rounded-xl border border-outline-variant/30 text-center animate-pulse"
+              >
+                <div className="font-space-grotesk text-[clamp(1.25rem,7cqw,2rem)] text-primary-fixed-dim font-semibold">500+</div>
+                <div className="font-jetbrains-mono text-xs text-on-surface-variant uppercase mt-1">Participants</div>
+              </motion.div>
               <motion.div
                 whileHover={{ y: -5 }}
                 className="p-sm md:p-md bg-surface-container-high rounded-xl border border-outline-variant/30 text-center"
               >
-                <div className="font-space-grotesk text-[clamp(1.25rem,7cqw,2rem)] text-primary-fixed-dim font-semibold">500+</div>
-                <div className="font-jetbrains-mono text-xs text-on-surface-variant uppercase mt-1">Members</div>
+                <div className="font-space-grotesk text-[clamp(1.25rem,7cqw,2rem)] text-primary-fixed-dim font-semibold">24 Hours</div>
+                <div className="font-jetbrains-mono text-xs text-on-surface-variant uppercase mt-1">Of Innovation</div>
               </motion.div>
               <motion.div
                 whileHover={{ y: -5 }}
                 className="p-sm md:p-md bg-surface-container-high rounded-xl border border-outline-variant/30 text-center"
               >
                 <div className="font-space-grotesk text-[clamp(1.25rem,7cqw,2rem)] text-primary-fixed-dim font-semibold">20+</div>
-                <div className="font-jetbrains-mono text-xs text-on-surface-variant uppercase mt-1">Events</div>
+                <div className="font-jetbrains-mono text-xs text-on-surface-variant uppercase mt-1">Events &amp; Workshops</div>
               </motion.div>
               <motion.div
                 whileHover={{ y: -5 }}
                 className="p-sm md:p-md bg-surface-container-high rounded-xl border border-outline-variant/30 text-center"
               >
-                <div className="font-space-grotesk text-[clamp(1.25rem,7cqw,2rem)] text-primary-fixed-dim font-semibold">1k+</div>
-                <div className="font-jetbrains-mono text-xs text-on-surface-variant uppercase mt-1">Builders</div>
+                <div className="font-space-grotesk text-[clamp(1.25rem,7cqw,2rem)] text-primary-fixed-dim font-semibold">1K+</div>
+                <div className="font-jetbrains-mono text-xs text-on-surface-variant uppercase mt-1">Community Members</div>
               </motion.div>
             </div>
             
@@ -68,7 +75,7 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-on-surface-variant text-body-md font-inter leading-relaxed"
             >
-              Our mission is to foster a culture of radical innovation. We believe that by bringing together the brightest minds in hardware and software, we can solve the world's most complex technical challenges.
+              We believe in the power of student-led innovation. HackBios brings together designers, engineers, developers, and creators to build collaborative software and hardware projects. Whether you are writing your first line of code or designing a complex prototype, this event is your playground to learn, network, and showcase what you can do.
             </motion.p>
           </div>
 

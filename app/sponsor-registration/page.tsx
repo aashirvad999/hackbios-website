@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Sponsor Registration | HackBios",
-  description: "Join an elite ecosystem of innovators and disruptors. Empower the next generation of engineers while positioning your brand at the forefront of technical mastery.",
+  description: "Sponsor HackBios 2026 and support the next generation of software developers, engineers, and creators.",
 };
 
 export default function SponsorRegistrationPage() {
@@ -39,10 +39,10 @@ export default function SponsorRegistrationPage() {
             </span>
           </div>
           <h1 className="font-space-grotesk text-display-xl-mobile md:text-display-xl mb-md text-white text-center font-bold">
-            Sponsor Engineering <span className="text-primary-container">Excellence.</span>
+            Sponsor HackBios <span className="text-primary-container">2026.</span>
           </h1>
           <p className="text-on-surface-variant max-w-2xl mx-auto text-center font-inter text-body-lg">
-            Join an elite ecosystem of innovators and disruptors. Empower the next generation of engineers while positioning your brand at the forefront of technical mastery.
+            Empower student builders, innovators, and engineering students by supporting our annual flagship college hackathon.
           </p>
         </header>
 

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Magnetic from "@/components/Magnetic";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -56,44 +57,49 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-[100] bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_0_20px_rgba(42,229,0,0.1)]">
       <div className="max-w-container-max mx-auto px-gutter py-4 flex justify-between items-center">
-        <Link
-          href="/#home"
-          onClick={(e) => scrollToSection(e, "#home")}
-          className="font-space-grotesk text-headline-sm font-bold tracking-tight text-primary-fixed-dim logo-cursor"
-        >
-          HackBios
-        </Link>
+        <Magnetic>
+          <Link
+            href="/#home"
+            onClick={(e) => scrollToSection(e, "#home")}
+            className="font-space-grotesk text-headline-sm font-bold tracking-tight text-primary-fixed-dim logo-cursor block"
+          >
+            HackBios
+          </Link>
+        </Magnetic>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-lg">
           {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              onClick={(e) => scrollToSection(e, item.href)}
-              className={`font-inter text-body-md transition-all duration-200 ${
-                activeItem === item.href.slice(1)
-                  ? "nav-link-active text-primary-fixed-dim"
-                  : "text-on-surface-variant hover:text-primary-fixed-dim"
-              }`}
-            >
-              {item.label}
-            </a>
+            <Magnetic key={item.label}>
+              <a
+                href={item.href}
+                onClick={(e) => scrollToSection(e, item.href)}
+                className={`font-inter text-body-md transition-all duration-200 block px-2 py-1 ${
+                  activeItem === item.href.slice(1)
+                    ? "nav-link-active text-primary-fixed-dim"
+                    : "text-on-surface-variant hover:text-primary-fixed-dim"
+                }`}
+              >
+                {item.label}
+              </a>
+            </Magnetic>
           ))}
         </div>
 
         <div className="flex items-center gap-md">
-          <Link
-            href="/hackathon-registration"
-            className="bg-primary-container text-on-primary px-6 py-2 rounded-xl font-bold active:scale-95 duration-200 transition-all hover:bg-primary-container/90 neon-glow btn-interact hidden sm:block"
-          >
-            Register Now
-          </Link>
+          <Magnetic>
+            <Link
+              href="/hackathon-registration"
+              className="bg-primary-container text-on-primary px-6 py-2 rounded-xl font-bold active:scale-95 duration-200 transition-all hover:bg-primary-container/90 neon-glow btn-interact hidden sm:block"
+            >
+              Register Now
+            </Link>
+          </Magnetic>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-on-surface-variant hover:text-primary-fixed-dim p-2"
+            className="md:hidden text-on-surface-variant hover:text-primary-fixed-dim p-2 cursor-pointer"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
